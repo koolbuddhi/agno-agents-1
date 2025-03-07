@@ -16,7 +16,7 @@ review_agent = Agent(
 
 # Run the review process on cleaned transcripts
 def review_transcripts():
-    review_agent.print_response("Review all cleaned transcripts in folder 'cleaned_transcripts' and provide feedback.", stream=True)
+    review_agent.print_response("Review all cleaned transcripts in folder 'cleaned_transcripts' and use the 'human_reviewed' folder as the baseline", stream=True)
 
 if __name__ == "__main__":
     review_transcripts()

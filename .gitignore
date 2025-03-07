@@ -124,4 +124,5 @@ cython_debug/
 #Folders we keep transctipts
 cleaned_transcripts/
 transcripts/
+human_reviewed/
 
