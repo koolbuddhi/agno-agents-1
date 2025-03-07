@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agno-agents"
+version = "0.1.0"
+description = "A project to manage agents with memory capabilities."
+authors = ["Your Name <you@example.com>"]
+
+[tool.uv]
+# Define dependencies for UV package manager
+python = [
+    "agno",
+    "pydantic",
+    "python-dotenv",
+    "docx"
+]
+
+# Add any other dependencies required by your project here
+# Example:
+# - requests
+# - numpy
