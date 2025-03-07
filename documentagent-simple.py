@@ -1,11 +1,22 @@
+from dotenv import load_dotenv
 from agno.agent import Agent
-from agno.models.openai import OpenAIChat
+from agno.models.azure import AzureOpenAI
+#from agno.models.openai import OpenAIChat
 from tools import DocumentTools
+import os
+
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Define the model globally using environment variable
+model = AzureOpenAI(id=os.getenv("MODEL_NAME"))
+#model = OpenAIChat(id=os.getenv("MODEL_NAME"))
 
 transcript_processor = Agent(
     name="Transcript Processor",
     role="Read folder of meeting transcripts in docx format and clean them without changing meaning",
-    model= OpenAIChat(id="gpt-4o"),
+    model=model,
     tools=[DocumentTools()],
     show_tool_calls=True,
     markdown=True,
