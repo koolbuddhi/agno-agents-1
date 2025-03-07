@@ -13,4 +13,4 @@ transcript_processor = Agent(
     instructions="Remove filler words, correct grammar, standardize formatting.",
 )
 
-transcript_processor.run("Process all meeting transcripts in folder 'transcripts' and save cleaned versions in 'cleaned_transcripts'.", stream=True)
+transcript_processor.print_response("Process all meeting transcripts in folder 'transcripts' and save cleaned versions in 'cleaned_transcripts' appending datetime tag to filename.", stream=True)
