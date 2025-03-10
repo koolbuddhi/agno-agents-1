@@ -1,0 +1,14 @@
+# UV package manager dependencies file
+
+# Python dependencies
+python:
+  - agno
+  - pydantic
+  - python-dotenv
+  - docx
+
+# Add any other dependencies required by your project here
+
+# Example:
+# - requests
+# - numpy
